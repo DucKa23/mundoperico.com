@@ -5,7 +5,16 @@
 </head>
 <body>
 
-	Esta es la pagina de Registro
+			<form method="post" id="ajaxform">
+			<h3> Registro</h3>
+			<input type="text" id="usuario" name="usuario" placeholder="Usuario">
+			<input type="email" id="email" name="email" placeholder="Email">
+			<input type="password" id="pwd" name="pwd" placeholder="Contraseña">
 
-</body>
+			<input type="button" id="btn" value="Enviar">
+			
+
+		</form>
+	</body>
 </html>
+
