@@ -89,3 +89,12 @@ if (defined("CONFIG_DIR")){
 // y que por tanto se puede ejecutar
 define("APP",$application);
 unset($application);
+
+
+// conexion a BBDD
+$host = $GLOBALS['config']['app']['db']['host'];
+$scheme = $GLOBALS['config']['app']['db']['dbname'];
+$usuario = $GLOBALS['config']['app']['db']['user'];
+$contraseña = $GLOBALS['config']['app']['db']['pass'];
+$pdo = new PDO('mysql:host='.$host.';dbname='.$scheme, $usuario, $contraseña);
+define ("DB", $pdo);
