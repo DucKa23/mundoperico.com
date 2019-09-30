@@ -96,5 +96,10 @@ $host = $GLOBALS['config']['app']['db']['host'];
 $scheme = $GLOBALS['config']['app']['db']['dbname'];
 $usuario = $GLOBALS['config']['app']['db']['user'];
 $contraseña = $GLOBALS['config']['app']['db']['pass'];
+
 $pdo = new PDO('mysql:host='.$host.';dbname='.$scheme, $usuario, $contraseña);
 define ("DB", $pdo);
+
+foreach($pdo->query('SELECT * from mydb.usuario') as $fila) {
+        print_r($fila);
+    }
